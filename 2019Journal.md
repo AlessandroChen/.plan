@@ -1,6 +1,15 @@
-# 2019-05-02 21:42:45
 
-## Conky
+<!-- vim-markdown-toc GitLab -->
+
+* [May 2019](#may-2019)
+    * [2019-05-02 21:42:45](#2019-05-02-214245)
+
+<!-- vim-markdown-toc -->
+
+# May 2019
+## 2019-05-02 21:42:45
+
+**Conky**
 I modified the i3-default conky config located at `/usr/share/conky/conky_maia`
 I added some features like showing my rest storage and modified the theme.
 The `conky_maia` file is now like this:
@@ -75,7 +84,7 @@ As I found the are some messy code, I set the locale to the US
 localectl set-locale LC_TIME=en_US.UTF-8
 ```
 
-## i3wm
+**i3wm**
 
 Everytime I change my Screen Output through `xrandr`, both my wallpaper and conky will be moved.
 By adding a key binding, I could use `$mod + shift + x` to do all those things at once:
@@ -83,7 +92,7 @@ By adding a key binding, I could use `$mod + shift + x` to do all those things a
 bindsym $mod+shift+x exec "xrandr --output HDMI1 --off --output LVDS1 --off --output VIRTUAL1 --off --output DP1 --off --output VGA1 --primary --mode 1440x900 --pos 0x0 --rotate normal ; killall conky ; start_conky_maia; nitrogen --set-zoom-fill ~/Pictures/wallhaven-760730.png"
 ```
 
-## mount
+**mount**
 
 Firstly, I got the UUID by `ls -all /dev/disk/by-uuid`
 And add the `fat32` filesystemed disk `sda1` and `sda5` to the `/etc/fstab`, which makes me available to access `C` and `D` on my Windows
