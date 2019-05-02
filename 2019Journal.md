@@ -10,6 +10,7 @@
 ## 2019-05-02 21:42:45
 
 **Conky**
+
 I modified the i3-default conky config located at `/usr/share/conky/conky_maia`
 I added some features like showing my rest storage and modified the theme.
 The `conky_maia` file is now like this:
@@ -91,6 +92,7 @@ By adding a key binding, I could use `$mod + shift + x` to do all those things a
 ```
 bindsym $mod+shift+x exec "xrandr --output HDMI1 --off --output LVDS1 --off --output VIRTUAL1 --off --output DP1 --off --output VGA1 --primary --mode 1440x900 --pos 0x0 --rotate normal ; killall conky ; start_conky_maia; nitrogen --set-zoom-fill ~/Pictures/wallhaven-760730.png"
 ```
+
 
 **mount**
 
