@@ -3,6 +3,8 @@
 
 * [May 2019](#may-2019)
     * [2019-05-02 21:42:45](#2019-05-02-214245)
+    * [2019-05-03 20:01:01](#2019-05-03-200101)
+    * [2019-05-18 18:19:34](#2019-05-18-181934)
 
 <!-- vim-markdown-toc -->
 
@@ -104,4 +106,32 @@ Unfortunately, `fat32` didn't support `chown` to change owner, so it's a little 
 UUID=d5b88742-a9a0-4696-a10a-833d626c53c7 /              ext4    defaults,noatime 0 1
 UUID=3659272E1032B8F3 /mnt/C/		auto		user,umask=000,utf8 0 0
 UUID=92A0B994A0B97EF3 /mnt/D/		auto		user,umask=000,utf8 0 0
+```
+
+## 2019-05-03 20:01:01
+
+**neovim - thinkvim**
+After comparing Neovim with Vim8.1, I choose to try Neovim and the wonderful configured file thinkvim.
+
+However, I got stuck because of some requirements.
+
+Firstly, we need to download Neovim v0.4.0 from github, since pacman only provides v0.3.4
+
+```bash
+wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
+tar -xzvf nvim-linux64.tar.gz
+sudo mv nvim-linux64 /usr/local/
+sudo ln -s /usr/local/nvim-linux64/bin/nvim /usr/bin/nvim
+```
+
+## 2019-05-18 18:19:34 
+
+**python**
+After I had upgrade the packages, python abort as follows:
+```
+/usr/lib/python3.7/site-packages/requests/__init__.py:91: RequestsDependencyWarning: urllib3 (1.25.2) or chardet (3.0.4) doesn't match a supported version!
+```
+I found this problem occured due to the forward module: urllib3, so I desided to downgrade it:
+```bash
+sudo pip install urllib3==1.24
 ```
