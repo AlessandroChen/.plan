@@ -5,6 +5,7 @@
     * [2019-05-02 21:42:45](#2019-05-02-214245)
     * [2019-05-03 20:01:01](#2019-05-03-200101)
     * [2019-05-18 18:19:34](#2019-05-18-181934)
+    * [2019-05-24 21:11:14](#2019-05-24-211114)
 
 <!-- vim-markdown-toc -->
 
@@ -111,6 +112,7 @@ UUID=92A0B994A0B97EF3 /mnt/D/		auto		user,umask=000,utf8 0 0
 ## 2019-05-03 20:01:01
 
 **neovim - thinkvim**
+
 After comparing Neovim with Vim8.1, I choose to try Neovim and the wonderful configured file thinkvim.
 
 However, I got stuck because of some requirements.
@@ -127,6 +129,7 @@ sudo ln -s /usr/local/nvim-linux64/bin/nvim /usr/bin/nvim
 ## 2019-05-18 18:19:34 
 
 **python**
+
 After I had upgrade the packages, python abort as follows:
 ```
 /usr/lib/python3.7/site-packages/requests/__init__.py:91: RequestsDependencyWarning: urllib3 (1.25.2) or chardet (3.0.4) doesn't match a supported version!
@@ -139,6 +142,7 @@ sudo pip install urllib3==1.24
 ## 2019-05-24 21:11:14
 
 **fcitx**
+
 Not until I typed Chinese did I realized that there is something wrong with my fcitx.
 
 When I press `contrl+space` noting was changed, I found environment settings may be the contibutor.
