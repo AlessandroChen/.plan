@@ -11,7 +11,7 @@
 # May 2019
 ## 2019-05-02 21:42:45
 
-**Conky**
+**conky**
 
 I modified the i3-default conky config located at `/usr/share/conky/conky_maia`
 I added some features like showing my rest storage and modified the theme.
@@ -134,4 +134,20 @@ After I had upgrade the packages, python abort as follows:
 I found this problem occured due to the forward module: urllib3, so I desided to downgrade it:
 ```bash
 sudo pip install urllib3==1.24
+```
+
+## 2019-05-24 21:11:14
+
+**fcitx**
+Not until I typed Chinese did I realized that there is something wrong with my fcitx.
+
+When I press `contrl+space` noting was changed, I found environment settings may be the contibutor.
+
+After upgraded, neither `.xprofile` nor `.xinitrc` was loaded. So I press the line into `/etc/environment`:
+
+```bash
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS="@im=fcitx"
+export LC_CTYPE="zh_CN.UTF-8"
 ```
