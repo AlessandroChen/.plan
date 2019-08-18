@@ -155,3 +155,23 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
 export LC_CTYPE="zh_CN.UTF-8"
 ```
+
+## 2019-06-22 19:57:14
+
+When I launch `deepin-wine-qq`, Error occured as follows:
+
+```
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  20 (X_GetProperty)
+  Resource id in failed request:  0x0
+  Serial number of failed request:  10
+  Current serial number in output stream:  10
+```
+
+To solve this, I installed the required dependency and set it to autostartup
+
+```bash
+$ sudo pacman -S cinnamon-settings-daemon
+/usr/lib/cinnamon-settings-daemon/csd-xsettings
+```
+
